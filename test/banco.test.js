@@ -1,6 +1,6 @@
 const Banco = require("../src/banco");
 
-describe("Banco", () => {
+describe("Classe Banco - Método depositar", () => {
   let banco;
 
   beforeEach(() => {
@@ -23,27 +23,49 @@ describe("Banco", () => {
     expect(banco.transacoes).toHaveLength(1);
     expect(banco.transacoes[0]).toEqual({ tipo: 'Depósito', valor: 50 });
   });
+});
 
-  // Método 2
+describe("Classe Banco - Método sacar", () => {
+  let banco;
+
+  beforeEach(() => {
+    banco = new Banco(); 
+    banco.saldo = 50;
+  });
+
   test("Sacar valor válido e atualizar o saldo", async () => {
     const novoSaldo = banco.sacar(20); // sacar retorna o novo saldo
     expect(novoSaldo).toBe(30);
     expect(banco.transacoes).toContainEqual({ tipo: 'Saque', valor: 20 });
-  })
+  });
+});
 
-  // Método 3
+describe("Classe Banco - Método obterSaldo", () => {
+  let banco;
 
-  // Método 4
+  beforeEach(() => {
+    banco = new Banco(); 
+    banco.saldo = 50;
+  });
+
   test("Obter saldo atual", async () => {
     expect(banco.saldo).toBe(50);
-  })
+  });
+});
+  
+describe("Classe Banco - Método obterHistorico", () => {
+  let banco;
 
-  // Método 5
+  beforeEach(() => {
+    banco = new Banco(); 
+    banco.saldo = 50;
+  });
+
   test("Obter histórico de transações", async () => {
     banco.depositar(20);
     banco.sacar(20);
     expect(banco.transacoes[0]).toEqual({ tipo: 'Depósito', valor: 20 });
     expect(banco.transacoes[1]).toEqual({ tipo: 'Saque', valor: 20 });
-  })
+  });
 });
 
