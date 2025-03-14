@@ -8,7 +8,6 @@ describe("Classe Banco - Método depositar", () => {
     banco.saldo = 50;
   });
 
-  // Método 1
   test("Depositar o valor alterando o saldo corretamente", async () => {
     const valorDepositado = 50;
   
@@ -69,3 +68,19 @@ describe("Classe Banco - Método obterHistorico", () => {
   });
 });
 
+describe("Classe Banco - Método verificarLimiteDeSaque", () => {
+  let banco;
+
+  beforeEach(() => {
+    banco = new Banco();
+    banco.limiteDeSaque = 500;
+  });
+
+  test('Deve permitir saque dentro do limite', () => {
+    expect(banco.verificarLimiteDeSaque(300)).toBe(true);
+  });
+
+  test('Deve lançar um erro ao tentar sacar acima do limite', () => {
+    expect(() => banco.verificarLimiteDeSaque(600)).toThrow('Saque acima do limite permitido');
+  });
+});
