@@ -1,33 +1,29 @@
-# API test automation with Jest and PactumJS
+# Automação de testes de API com Jest e PactumJS
 
-> Simple integration between JestJS and PactumJS.
+> Integração simples entre Jest e PactumJS
 
 ## GitHub Actions
 
-[![Node.js CI](https://github.com/ugioni/integration-tests-jest/actions/workflows/node.js.yml/badge.svg?branch=master)](https://github.com/ugioni/integration-tests-jest/actions/workflows/node.js.yml)
+[![Node.js CI](https://github.com/ardnaile/automacao-testes/actions/workflows/node.js.yml/badge.svg?branch=integration-test-jest)](https://github.com/ardnaile/automacao-testes/actions/workflows/node.js.yml)
 
-## SonarCloud
+## Começando
 
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ugioni_integration-tests-jest&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=ugioni_integration-tests-jest)
-
-# Getting Started
-
-### Pactum docs:
+### Documentação do framework PactumJS:
  - [PactumJS](https://pactumjs.github.io/)
 
-### Prerequisites:
+### Pré requisitos:
  - NodeJS `v20`
 
-### How to run?
+### Como executar:
 
-Inside of the project folder run:
+Execute os seguintes comandos dentro da pasta do projeto:
 
  1. `npm install --save-dev`
- 1. `npm run ci`
+ 2. `npm run ci`
 
-After that you should see a `./output` folder with some `HTML` reports.
+Após rodar os comandos, é possível visualizar relatórios `HTML` dentro da pasta `./output`. 
 
-### Docs to Api under tests: 
+### Documentação das APIs testadas neste projeto: 
  - [Deck of Cards](https://deckofcardsapi.com/)
  - [JSON placeholder](https://jsonplaceholder.typicode.com/)
  - [http bin](http://httpbin.org/)
