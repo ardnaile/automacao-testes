@@ -1,6 +1,6 @@
 # Automação de testes de API com Jest e PactumJS
 
-> Integração simples entre Jest e PactumJS.
+> Integração simples entre Jest e PactumJS
 
 ## GitHub Actions
 
