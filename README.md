@@ -1,5 +1,5 @@
 # Testes Unitários com Jest
-Nesta aplicação foi utilizado o Jest como framework de testes unitários para garantir a qualidade do código.
+> Nesta aplicação foi utilizado o Jest como framework de testes unitários para garantir a qualidade do código.
 
 ## GitHub Actions
 
