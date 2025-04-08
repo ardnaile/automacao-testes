@@ -1,6 +1,10 @@
 # Testes Unitários com Jest
 Nesta aplicação foi utilizado o Jest como framework de testes unitários para garantir a qualidade do código.
 
+## GitHub Actions
+
+[![Node.js CI](https://github.com/ardnaile/automacao-testes/actions/workflows/node.js.yml/badge.svg?branch=unit-test-jest)](https://github.com/ardnaile/automacao-testes/actions/workflows/node.js.yml)
+
 ## Começando
 
 Para executar este projeto siga os passos abaixo:
