@@ -3,7 +3,7 @@ import { StatusCodes } from 'http-status-codes';
 import { SimpleReporter } from '../simple-reporter';
 import data from '../data/data.json';
 
-describe('Echo validation', () => { 
+describe('Echo validation', () => {
   const p = pactum;
   const rep = SimpleReporter; // setar o reporter para preencher o relatório
   const baseUrl = 'https://httpbin.org'; // url da api
@@ -14,7 +14,8 @@ describe('Echo validation', () => {
   afterAll(() => p.reporter.end());
 
   describe('Verifying endpoints using POST method', () => {
-    it('Should return the same data as the json sent', async () => { // async e await pq vai esperar resposta da api
+    it('Should return the same data as the json sent', async () => {
+      // async e await pq vai esperar resposta da api
       await p
         .spec() // "vou fazer uma requisição"
         .post(`${baseUrl}/anything`)
